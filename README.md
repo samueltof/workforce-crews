@@ -1,79 +1,66 @@
-# Data Project Template
+# Workforce Crews - AI Agent Teams
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Project%20Template-2856f7" alt="Datalumina Project" />
-</a>
+## Project Overview
+This repository showcases my work building multi-agent AI systems ("crews") that collaborate to perform complex tasks. Each crew consists of specialized AI agents working together through a well-defined workflow.
 
-## Cookiecutter Data Science
-This project template is a simplified version of the [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org) template, created to suit the needs of Datalumina and made available as a GitHub template.
+## Key Features
+- **Agent Teams**: Multiple specialized AI agents working in coordinated workflows
+- **Task Automation**: Automatic content creation, research, and data analysis
+- **Use Cases**:
+  - Content Creation: Generate articles and social media posts
+  - Research Assistants: Perform comprehensive research on topics
+  - Sales Support: AI-powered sales analysis and support
+  - Report Generation: Create detailed reports on various topics
 
-## Adjusting .gitignore
+## Technology Stack
+- Python
+- CrewAI and LangGraph for agent orchestration
+- Various LLM models through OpenAI/Groq
+- Web scraping and search tools
+- Supabase for data persistence
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
-
-```plaintext
-# exclude data from source control by default
-# /data/
+## Project Structure
+```
+├── data              <- Data storage for models and processing
+├── models            <- Trained models and configurations
+├── notebooks         <- Jupyter notebooks for experimentation
+├── reports           <- Generated analysis and reports
+├── src               <- Source code for the project
+    ├── agents        <- Individual agent definitions
+    ├── crews         <- Crew definitions and configurations
+    │   ├── content_creation
+    │   ├── sales
+    │   └── use_case_report_creation
+    ├── services      <- Service connections (Supabase, etc.)
+    └── ui.py         <- User interface components
 ```
 
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
+## Running the Project
+1. Clone this repository
+2. Create a virtual environment: `python -m venv .venv`
+3. Activate the virtual environment:
+   - Windows: `.venv\Scripts\activate`
+   - MacOS/Linux: `source .venv/bin/activate`
+4. Install dependencies: `pip install -r requirements.txt`
+5. Copy `.env.example` to `.env` and fill in your API keys
+6. Run a crew example: `python src/crews/use_case_report_creation/use_case_multiagent.py`
 
-## Duplicating the .env File
-To set up your environment variables, you need to duplicate the `.env.example` file and rename it to `.env`. You can do this manually or using the following terminal command:
+## Examples
+The repository contains several examples of AI crews:
+- **Report Creation**: Creates detailed reports on various topics with social media posts
+- **Research Assistant**: Conducts in-depth research on specified topics
+- **Content Creation**: Generates articles and social media content
 
-```bash
-cp .env.example .env # Linux, macOS, Git Bash, WSL
-copy .env.example .env # Windows Command Prompt
-```
+## Portfolio Notes
+This project demonstrates my expertise in:
+- Large Language Model orchestration
+- Multi-agent AI systems
+- Python development
+- Prompt engineering
+- AI workflow design
 
-This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
+## License
+[License details]
 
-
-## Project Organization
-
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── README.md          <- The top-level README for developers using this project
-├── data
-│   ├── external       <- Data from third party sources
-│   ├── interim        <- Intermediate data that has been transformed
-│   ├── processed      <- The final, canonical data sets for modeling
-│   └── raw            <- The original, immutable data dump
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-└── src                         <- Source code for this project
-    │
-    ├── __init__.py             <- Makes src a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    │    
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    ├── plots.py                <- Code to create visualizations 
-    │
-    └── services                <- Service classes to connect with external platforms, tools, or APIs
-        └── __init__.py 
-```
-
---------
+## Contact
+[Your contact information]
