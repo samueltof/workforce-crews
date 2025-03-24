@@ -121,7 +121,7 @@ content_creation_crew = Crew(
 )
 
 result = content_creation_crew.kickoff(
-    inputs={"subject": "Latest news on the AI industry"}
+    inputs={"subject": "Conversational data agents for databases with bids proposals"}
 )
 
 # Access social media posts directly
